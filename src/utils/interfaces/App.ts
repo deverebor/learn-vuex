@@ -4,4 +4,6 @@ export interface App {
   $store: any;
   myName: string;
   saveName(): void;
+  changeFirstName: Record<string, unknown>;
+  changeLastName: Record<string, unknown>;
 }
