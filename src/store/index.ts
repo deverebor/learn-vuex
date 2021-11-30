@@ -1,8 +1,18 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    user:{
+      firstName: "Jhon",
+      lastName: "Doe",
+      email: "jhon@doe.com",
+    },
+  },
   mutations: {},
-  actions: {},
+  actions: {
+    saveFirstName(context, payload) {
+      console.log(payload);
+    }
+  },
   modules: {},
 });

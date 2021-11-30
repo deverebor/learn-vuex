@@ -1,16 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  {{ $store.state.user.firstName }}
+  <br />
+  <input v-model="myName" type="text" />
+
+  <button @click.prevent.stop="saveName">Save</button>
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import { App } from "../src/utils/interfaces/App";
 
-export default defineComponent({
+export default defineComponent<App>({
   name: "App",
   components: {
     HelloWorld,
+  },
+  data() {
+    return {
+      myName: "",
+    };
+  },
+  methods: {
+    saveName(){
+      //Action
+      this.$store.dispatch('saveFirstName', this.myName);
+
+      //Mutation
+      //this.$store.commit();
+    },
   },
 });
 </script>
