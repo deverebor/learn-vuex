@@ -1,10 +1,48 @@
 <template>
-  {{ $store.state.user.firstName }}
-  <br />
-  <input v-model="myName" type="text" />
+  <div class="container mt-16">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="col" :key="product.id" v-for="product in products">
+        <div class="card shadow-sm">
+          <svg
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="225"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder: Thumbnail"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#44495c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+          </svg>
 
-  <button @click.prevent.stop="saveName">Save</button>
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+          <div class="card-body">
+            <p class="card-text">
+              {{ product.name }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button
+                  @click="addToCart(product)"
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  Adicionar
+                </button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <code>
+    {{ $store.state.cart }}
+  </code>
 </template>
 
 <script lang="ts">
@@ -19,7 +57,11 @@ export default defineComponent<App>({
   },
   data() {
     return {
-      myName: "",
+      products: [
+        { id: 1, name: "Product 1" },
+        { id: 2, name: "Product 2" },
+        { id: 3, name: "Product 3" },
+      ],
     };
   },
   methods: {
@@ -29,6 +71,10 @@ export default defineComponent<App>({
 
       //Mutation
       //this.$store.commit('saveFirstName', this.myName);
+    },
+
+    addToCart(product: any) {
+      this.$store.commit("addProduct", product);
     },
   },
 });
