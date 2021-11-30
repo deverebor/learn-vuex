@@ -28,7 +28,7 @@ export default defineComponent<App>({
       this.$store.dispatch('saveFirstName', this.myName);
 
       //Mutation
-      //this.$store.commit();
+      //this.$store.commit('saveFirstName', this.myName);
     },
   },
 });
