@@ -7,5 +7,4 @@ export interface App {
   myName: string;
   changeFirstName: Record<string, unknown>;
   changeLastName: Record<string, unknown>;
-  products: [{ id: number; name: string }];
 }

@@ -47,14 +47,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 import { App } from "../src/utils/interfaces/App";
 
 export default defineComponent<App>({
   name: "App",
-  components: {
-    HelloWorld,
-  },
   data() {
     return {
       products: [
@@ -65,7 +61,7 @@ export default defineComponent<App>({
     };
   },
   methods: {
-    saveName(){
+    saveName() {
       //Action
       this.$store.dispatch('saveFirstName', this.myName);
 
@@ -80,13 +76,4 @@ export default defineComponent<App>({
 });
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./App.scss" lang="scss" />
