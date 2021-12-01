@@ -61,15 +61,7 @@ export default defineComponent<App>({
     };
   },
   methods: {
-    saveName() {
-      //Action
-      this.$store.dispatch('saveFirstName', this.myName);
-
-      //Mutation
-      //this.$store.commit('saveFirstName', this.myName);
-    },
-
-    addToCart(product: any) {
+    addToCart(product: string) {
       this.$store.commit("addProduct", product);
     },
   },

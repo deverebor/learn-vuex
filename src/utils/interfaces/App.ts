@@ -1,11 +1,5 @@
 export interface App {
-  saveName(): void;
-  addToCart(product: any): void;
-  firstName: string;
-  lastName: string;
+  addToCart(product: string): void;
   products: any;
   $store: any;
-  myName: string;
-  changeFirstName: Record<string, unknown>;
-  changeLastName: Record<string, unknown>;
 }
