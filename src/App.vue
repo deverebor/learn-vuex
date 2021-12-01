@@ -42,7 +42,7 @@
 
   <div class="callbackResult">
     <div>
-      <h1 class="callbackTitle">Resultado da chamada</h1>
+      <h1 class="callbackTitle">Resultado da Chamada</h1>
       <code>
         {{ $store.state.cart }}
       </code>

@@ -17,17 +17,17 @@ Ele fica responsável por ser o intermediador entre a API e os Componentes.
 
 ![Modulo](./img/logic_order.png)
 
-Uma AÇÃO deve chamar uma MUTAÇÃO para alterar um ESTADO;
+Uma **AÇÃO** deve chamar uma **MUTAÇÃO** para alterar um **ESTADO**;
 
-**mutations** são funções sincronas, ou seja, quando é disparada o sistema tem que esperar a finalização da mutation.
+- As **mutations** são funções sincronas, ou seja, quando é disparada o sistema tem que esperar a finalização da mutation.
 
-**action** são funções assincronas, `async` que podem ser executadas e não necessitam esperar a sua finalização.
+- As **action** são funções assincronas, `async` que podem ser executadas e não necessitam esperar a sua finalização.
 
-Não é obrigatorio usar a action junto com o mutation. Se utiliza action quando necessita de uma promisse, normalmente quando se faz uma requisção para a API ou qualquer tarefa que seja necessário o uso de uma promisse.
+Não é obrigatório usar a action junto com o mutation. Se utiliza action quando necessita de uma promise, normalmente quando se faz uma requisição para a API ou qualquer tarefa que seja necessário o uso de uma promise.
 
-$store -> acesso o state do vuex.
+$store -> acesso ao vuex.
 
-Tudo que for alterado no vuex será replicado nos componentes
+Tudo que for alterado no vuex será `'replicado'` nos componentes
 
 para chamar uma **action** usa-se o `store.dispatch`
 para chamar uma **mutation** usa-se o `store.commit`
