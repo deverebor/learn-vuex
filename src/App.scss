@@ -10,12 +10,10 @@ button {
   margin-top: 1rem;
 }
 
-.user-name {
-  color: #0b71cf7c;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-#top-label {
-  margin-top: 2rem;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 1.5rem;
+  display: block;
+  grid-row: 1 / 2;
 }
