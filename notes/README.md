@@ -6,15 +6,14 @@ Ele fica responsável por ser o intermediador entre a API e os Componentes.
 
 ![Modelo](./img/modelos.png)
 
-
-## Atributos do VUEX: 
+## Atributos do VUEX
 
 - state:{} - controla o estado;
 - mutations:{} - muda o estado;
 - actions:{} - ações dentro de um determinado contexto;
 - modules:{} - divisões unicas que contém `states, mutations e actions` cuidado de determinados modulos
 
-## Ordem lógica do vuex:
+## Ordem lógica do vuex
 
 ![Modulo](./img/logic_order.png)
 
