@@ -1,3 +1,8 @@
+:root {
+  --code-font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --white: #fff;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,11 +14,27 @@
 button {
   margin-top: 1rem;
 }
+.callbackResult{
+    background: linear-gradient(to right, rgb(117, 31, 31),rgb(255, 166, 0));
+    background-clip: padding-box; /* !importanté */
+    border: solid 5px transparent; /* !importanté */
+    border-radius: 1rem;
+    margin: 5rem 35rem -40rem 35rem;
+    color: var(--white);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 1.5rem;
-  display: block;
-  grid-row: 1 / 2;
+  .callbackTitle {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-family: var(--code-font-family);
+    font-size: 1.5rem;
+  }
 }

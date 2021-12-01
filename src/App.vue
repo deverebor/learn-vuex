@@ -40,9 +40,14 @@
     </div>
   </div>
 
-  <code>
-    {{ $store.state.cart }}
-  </code>
+  <div class="callbackResult">
+    <div>
+      <h1 class="callbackTitle">Resultado da chamada</h1>
+      <code>
+        {{ $store.state.cart }}
+      </code>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
