@@ -5,9 +5,7 @@ const ModulePokemon: any = {
   state: () => ({
     api: "https://pokeapi.co/api/v2/pokemon/",
   }),
-  mutations: {},
-  actions: {},
-  getters: {
+  mutations: {
     fetchPokemons(url = "https://pokeapi.co/api/v2/pokemon/") {
       axios
         .get(url)
@@ -19,6 +17,8 @@ const ModulePokemon: any = {
         });
     },
   },
+  actions: {},
+  getters: {},
 };
 
 export default createStore({
