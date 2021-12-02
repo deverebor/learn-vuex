@@ -43,3 +43,10 @@ Caso haja uma repetição no fluxo da utilização de uma action para uma mutati
 O stric mode quando estiver true dentro do store, não vai permitir alterar estados sem antes passar nas mutations.
 
 A computed é nativamente onde ficará os getters e setters
+
+## map
+
+- 𝐦𝐚𝐩𝐒𝐭𝐚𝐭𝐞 é um auxiliar que simplifica a criação de uma propriedade computada que reflete o valor de um determinado estado.
+- 𝐦𝐚𝐩𝐆𝐞𝐭𝐭𝐞𝐫𝐬 é um helper que simplifica a criação de uma propriedade computada que reflete o valor retornado por um determinado getter.
+- 𝐦𝐚𝐩𝐀𝐜𝐭𝐢𝐨𝐧𝐬 é um helper que simplifica a criação de um método que seria equivalente a chamar dispatch em uma ação.
+- 𝐦𝐚𝐩𝐌𝐮𝐭𝐚𝐭𝐢𝐨𝐧𝐬 é um helper que simplifica a criação de um método que seria equivalente a chamar commit em uma mutação.
