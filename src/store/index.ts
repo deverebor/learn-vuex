@@ -1,11 +1,23 @@
 import { createStore } from "vuex";
+import axios from "axios";
 
-const ModulePokemon = {
-  state: () => ({}),
+const ModulePokemon: any = {
+  state: () => ({
+    api: "https://pokeapi.co/api/v2/pokemon/",
+  }),
   mutations: {},
   actions: {},
   getters: {
-    //TODO: adicionar a conexão com a api aqui ?
+    fetchPokemons(url = "https://pokeapi.co/api/v2/pokemon/") {
+      axios
+        .get(url)
+        .then(({ data }) => {
+          this.api = data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 };
 
