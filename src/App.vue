@@ -1,23 +1,12 @@
 <template>
   <div class="container mt-8">
-    <span class="user-name">
-      {{ $store.state.user.firstName }} {{ $store.state.user.lastName }}
-    </span>
-    <br />
-    <label id="top-label" for="">Primeiro Nome</label>
-    <br />
-    <input class="form-control" v-model="changeFirstName" type="text" />
-    <br />
-    <label for="">Sobre Nome</label>
-    <br />
-    <input class="form-control" v-model="changeLastName" type="text" />
-
-    <button class="btn btn-primary" @click.prevent.stop="saveName">Save</button>
+    <Pokemon />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import  Pokemon  from "./components/Pokemon/Pokemon.vue";
 import { App } from "../src/utils/interfaces/App";
 
 export default defineComponent<App>({
@@ -26,6 +15,9 @@ export default defineComponent<App>({
     return {
       myName: "",
     };
+  },
+  components: {
+    Pokemon,
   },
   computed: {
     changeFirstName: {
