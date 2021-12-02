@@ -1,4 +1,4 @@
-export interface App {
+export interface IApp {
   firstName: string;
   lastName: string;
   $store: any;

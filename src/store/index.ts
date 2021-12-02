@@ -1,5 +1,14 @@
 import { createStore } from "vuex";
 
+const ModulePokemon = {
+  state: () => ({}),
+  mutations: {},
+  actions: {},
+  getters: {
+    //TODO: adicionar a conexão com a api aqui ?
+  },
+};
+
 export default createStore({
   strict: true,
   state: {
@@ -9,5 +18,7 @@ export default createStore({
   },
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    pokemon: ModulePokemon,
+  },
 });
