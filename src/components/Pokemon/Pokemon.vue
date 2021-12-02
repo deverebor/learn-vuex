@@ -17,7 +17,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import axios from "axios";
 import { IPokemon } from "@/utils/interfaces/IPokemon";
 
 export default defineComponent<IPokemon>({
@@ -30,26 +29,16 @@ export default defineComponent<IPokemon>({
   created() {
     this.fetchPokemons();
   },
-  methods: {
-    fetchPokemons(url = "https://pokeapi.co/api/v2/pokemon/") {
-      axios
-        .get(url)
-        .then(({ data }) => {
-          this.api = data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+  computed: {
+    next: function () {
+      return this.api.next;
     },
 
-    next() {
-      this.fetchPokemons(this.api.next);
-    },
-
-    previous() {
-      this.fetchPokemons(this.api.next);
+    previous: function () {
+      return this.api.previous;
     },
   },
+  methods: {},
 });
 </script>
 
