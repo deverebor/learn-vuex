@@ -1,4 +1,6 @@
-## Vuex é tipo um "middleware"
+# Vuex
+
+Pode ser considerado tipo um "middleware"
 
 Ele fica responsável por ser o intermediador entre a API e os Componentes.
 
@@ -50,3 +52,27 @@ A computed é nativamente onde ficará os getters e setters
 - 𝐦𝐚𝐩𝐆𝐞𝐭𝐭𝐞𝐫𝐬 é um helper que simplifica a criação de uma propriedade computada que reflete o valor retornado por um determinado getter.
 - 𝐦𝐚𝐩𝐀𝐜𝐭𝐢𝐨𝐧𝐬 é um helper que simplifica a criação de um método que seria equivalente a chamar dispatch em uma ação.
 - 𝐦𝐚𝐩𝐌𝐮𝐭𝐚𝐭𝐢𝐨𝐧𝐬 é um helper que simplifica a criação de um método que seria equivalente a chamar commit em uma mutação.
+
+mapGetters:
+ Ele recebe 2 parametros
+
+  ```ts
+ mapGetters({
+ nomeDoMetodoQueSeraUsadoNoComponente: "metodoQueSeraMapeadoNoStore"
+ })
+  ```
+
+O nome do método pode ser qualuqer um, mas o quer será mapeado
+precisa ser o que existe dentro do store.
+
+Caso os métodos que obtenham o mesmo nome, você pode criar um array e utilizar o mesmo nome no componente.
+
+```ts
+  mapGetters['metodoQueVaiSerMapeados']
+```
+
+Quando se tem mais de um método a ser utilizado dentro da computed, usa-se o spreed operator.
+
+A mesma lógica serve para o mapState, mapAction e mapMutation.
+
+Este [vídeo](https://youtu.be/ksDmbBqpw2A) explica muito bem o conceito de mapGetters, mapState, mapAction e mapMutation.
